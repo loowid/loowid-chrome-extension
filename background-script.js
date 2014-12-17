@@ -6,7 +6,9 @@ chrome.runtime.onConnect.addListener(function (port) {
     
     // this one is called for each message from "content-script.js"
     function portOnMessageHanlder(message) {
-        if(message == 'get-sourceId') {
+		
+	var extMsg = 'get-sourceId-from-ext-' + chrome.runtime.id;
+	if(message == extMsg){
             chrome.desktopCapture.chooseDesktopMedia(session, port.sender.tab, onAccessApproved);
         }
     }

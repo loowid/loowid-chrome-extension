@@ -1,10 +1,10 @@
 {
-    "name" : "Loowid Screen Capturing",
+    "name" : "Loowid Multidomain Screen Capturing",
     "author": "Loowid.com",
-    "version" : "1.0.1",
+    "version" : "1.0.6",
     "manifest_version" : 2,
     "minimum_chrome_version": "34",
-    "description" : "This is a WebRTC screen capturing extension that can be used with LooWID.com, it's based on the previous work of Muaz Khan",
+    "description" : "Generic screen capturing extension that can be used with LooWID in all domains, based on previous work of Muaz Khan",
     "homepage_url": "https://www.loowid.com",
     "background": {
         "scripts": ["background-script.js"],
@@ -14,7 +14,7 @@
        "js": [ "content-script.js" ],
        "all_frames": true,
        "run_at": "document_start",
-       "matches": ["https://www.loowid.com/*","https://localhost/*"]
+       "matches": ["https://*/*"]
     }],
     "icons" : {
         "128" : "hero.png"
